@@ -42,4 +42,5 @@ More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 function x() {
   return 'hello world'
 }
+x()
 ```
