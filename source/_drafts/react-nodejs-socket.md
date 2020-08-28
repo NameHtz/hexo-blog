@@ -20,10 +20,21 @@ yarn start
 >Node.js
 ```shell script
 mkdir node-socket && cd node-socket
-yarn add express && socket.io
+yarn add express && socket.io && nodemon
 ```
 ####前端代码
 ```jsx
 
 ```
 ####Node.js代码
+在package.json中添加启动命令
+```json
+ {
+  .....
+ "sctipts": {
+     "start": "nodemon index.js"
+  }
+  ......
+ }
+```
+关于更多 [nodemon](https://github.com/remy/nodemon#nodemon)
