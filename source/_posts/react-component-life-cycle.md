@@ -4,6 +4,12 @@ date: 2020-08-20 23:36:51
 tags:
 ---
 [React](https://reactjs.org) 组件生命周期钩子函数
+
+####组件生命周期的三个阶段
+1. Mounting（加载阶段）
+2. Updating（更新阶段）
+3. Unmounting（卸载阶段）
+
 <!-- more -->
 ```jsx
 class Welcome extends React.Component {
