@@ -15,7 +15,7 @@
 <meta property="og:description" content="React 组件生命周期钩子函数 ####组件生命周期的三个阶段  Mounting（加载阶段） Updating（更新阶段） Unmounting（卸载阶段）">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-20T15:36:51.000Z">
-<meta property="article:modified_time" content="2020-08-29T13:16:43.054Z">
+<meta property="article:modified_time" content="2020-08-30T14:23:55.509Z">
 <meta property="article:author" content="june">
 <meta name="twitter:card" content="summary">
   
@@ -97,6 +97,14 @@
 </ol>
 <a id="more"></a>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Welcome</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line"> <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="built_in">super</span>(props);</span><br><span class="line">    <span class="built_in">this</span>.state = &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 组件每次被render的时候，包括在组件构建之后（虚拟dom之后，实际dom挂载之前）</span></span><br><span class="line"><span class="comment">    * 每次获取新的props或state之后；</span></span><br><span class="line"><span class="comment">    * 每次接收新的props之后都会返回一个对象作为新的state，返回null则说明不需要更新state；</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="keyword">static</span> getDerivedStateFromProps(props, state) &#123;</span><br><span class="line">     <span class="keyword">return</span> state</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 获取到javascript错误</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   componentDidCatch(error, info) &#123;&#125;</span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 挂载后</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   componentDidMount() &#123;&#125;</span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 组件props或者state改变时触发，</span></span><br><span class="line"><span class="comment">    * true:更新</span></span><br><span class="line"><span class="comment">    * false:不更新</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   shouldComponentUpdate(nextProps, nextState) &#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 组件更新前触发</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   getSnapshotBeforeUpdate(prevProps, prevState) &#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 组件更新后触发</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   componentDidUpdate() &#123;&#125;</span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 组件卸载时触发</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   componentWillUnmount() &#123;&#125;</span><br><span class="line"></span><br><span class="line">   render() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;this.props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>React16新的生命周期弃用了componentWillMount、componentWillReceiveProps，componentWillUpdate</li>
+<li>新增了getDerivedStateFromProps、getSnapshotBeforeUpdate来代替弃用的三个钩子函数 componentWillMount、componentWillReceiveProps，componentWillUpdate </li>
+<li>React16并没有删除这三个钩子函数，但是不能和新增的钩子函数 getDerivedStateFromProps、getSnapshotBeforeUpdate 混用，React17将会删除 componentWillMount、componentWillReceiveProps，componentWillUpdate</li>
+<li>新增了对错误的处理 componentDidCatch</li>
+</ol>
+
       
     </div>
     <footer class="article-footer">
@@ -151,6 +159,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/08/31/url-search-params/">URLSearchParams</a>
+          </li>
         
           <li>
             <a href="/2020/08/25/chinese-initials-sort/">按照中文拼音首字母顺序排序</a>
