@@ -1,16 +1,40 @@
 ---
 title: React生命周期钩子函数
 date: 2020-08-20 23:36:51
-tags:
+tags: 笔记、react
 ---
-[React](https://reactjs.org) 组件生命周期钩子函数
 
-####组件生命周期的三个阶段
-1. Mounting（加载阶段）
-2. Updating（更新阶段）
-3. Unmounting（卸载阶段）
+##### 组件生命周期的三个阶段
+1. Mounting（挂载）
+2. Updating（更新）
+3. Unmounting（卸载）
 
 <!-- more -->
+
+##### 挂载 (Mounting)
+当组件实例被创建并插入 DOM 中时，其生命周期调用顺序如下：
++ constructor()
++ static getDerivedStateFromProps()
++ render()
++ componentDidMount()
+
+##### 更新 (Updating)
+当组件的 props 或 state 发生变化时会触发更新。组件更新的生命周期调用顺序如下：
++ static getDerivedStateFromProps()
++ shouldComponentUpdate()
++ render()
++ getSnapshotBeforeUpdate()
++ componentDidUpdate()
+
+##### 卸载 (Unmounting)
+当组件从 DOM 中移除时会调用如下方法：
++ componentWillUnmount()
+
+##### 错误处理
+当渲染过程，生命周期，或子组件的构造函数中抛出错误时，会调用如下方法：
++ static getDerivedStateFromError()
++ componentDidCatch()
+
 ```jsx
 class Welcome extends React.Component {
  constructor(props) {
@@ -66,3 +90,7 @@ class Welcome extends React.Component {
 2. 新增了getDerivedStateFromProps、getSnapshotBeforeUpdate来代替弃用的三个钩子函数 componentWillMount、componentWillReceiveProps，componentWillUpdate 
 3. React16并没有删除这三个钩子函数，但是不能和新增的钩子函数 getDerivedStateFromProps、getSnapshotBeforeUpdate 混用，React17将会删除 componentWillMount、componentWillReceiveProps，componentWillUpdate
 4. 新增了对错误的处理 componentDidCatch
+
+[异步渲染之更新](https://zh-hans.reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
+
+[React](https://reactjs.org) 组件生命周期钩子函数

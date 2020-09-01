@@ -1,7 +1,7 @@
 ---
 title: URLSearchParams
 date: 2020-08-31 08:18:09
-tags:
+tags: 笔记、javascript
 ---
 
 

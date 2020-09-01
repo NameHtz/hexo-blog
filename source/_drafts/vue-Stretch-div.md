@@ -5,7 +5,7 @@ tags:
 
 ```vue
 <template>
-  <div class="home-box">
+  <div class="stretch-box">
     <div class="table-box" :style="{height: `${tableHeight}px`}">
 
     </div>
@@ -21,7 +21,7 @@ tags:
 
 <script>
 export default {
-  name: "home",
+  name: "stretch",
   data() {
     return {
       tableHeight: 150,
