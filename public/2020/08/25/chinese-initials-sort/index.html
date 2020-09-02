@@ -7,15 +7,15 @@
   
   <title>按照中文拼音首字母顺序排序 | 前端呀前端</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="String.prototype.localeCompare() DOC localeCompare() 方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。">
+  <meta name="description" content="localeCompare() 方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="按照中文拼音首字母顺序排序">
 <meta property="og:url" content="https://namehtz.github.io/2020/08/25/chinese-initials-sort/index.html">
 <meta property="og:site_name" content="前端呀前端">
-<meta property="og:description" content="String.prototype.localeCompare() DOC localeCompare() 方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。">
+<meta property="og:description" content="localeCompare() 方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-25T10:57:06.000Z">
-<meta property="article:modified_time" content="2020-08-31T05:40:14.200Z">
+<meta property="article:modified_time" content="2020-09-02T06:47:34.085Z">
 <meta property="article:author" content="june">
 <meta property="article:tag" content="笔记、javascript">
 <meta name="twitter:card" content="summary">
@@ -89,11 +89,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare">String.prototype.localeCompare() DOC</a></p>
-<p>localeCompare() 方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。</p>
+        <p>localeCompare() 方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。</p>
 <a id="more"></a>
+
 <p>新的 locales 、 options 参数能让应用程序定制函数的行为即指定用来排序的语言。<br>locales 和 options 参数是依赖于具体实现的，在旧的实现中这两个参数是完全被忽略的。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&quot;按&quot;</span>, <span class="string">&quot;照&quot;</span>, <span class="string">&quot;中&quot;</span>, <span class="string">&quot;文&quot;</span>, <span class="string">&quot;拼&quot;</span>, <span class="string">&quot;音&quot;</span>, <span class="string">&quot;首&quot;</span>, <span class="string">&quot;字&quot;</span>, <span class="string">&quot;母&quot;</span>, <span class="string">&quot;顺&quot;</span>, <span class="string">&quot;序&quot;</span>, <span class="string">&quot;排&quot;</span>, <span class="string">&quot;序&quot;</span>];</span><br><span class="line">arr.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a.localeCompare(b, <span class="string">&quot;zh-Hans-CN&quot;</span>, &#123;<span class="attr">sensitivity</span>:<span class="string">&quot;accent&quot;</span>&#125;))</span><br><span class="line"><span class="comment">// [&quot;按&quot;, &quot;母&quot;, &quot;排&quot;, &quot;拼&quot;, &quot;首&quot;, &quot;顺&quot;, &quot;文&quot;, &quot;序&quot;, &quot;序&quot;, &quot;音&quot;, &quot;照&quot;, &quot;中&quot;, &quot;字&quot;]</span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare">String.prototype.localeCompare()</a></p>
 
       
     </div>
