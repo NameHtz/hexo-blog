@@ -20,7 +20,7 @@ yarn start
 >Node.js
 ```shell script
 mkdir node-socket && cd node-socket
-yarn add express && socket.io && nodemon
+yarn add express socket.io nodemon
 ```
 ####前端代码
 ```jsx
