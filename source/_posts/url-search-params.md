@@ -4,6 +4,7 @@ date: 2020-08-31 08:18:09
 tags: 笔记、javascript
 ---
 
+URLSearchParams
 
 ```javascript
 let params = new URLSearchParams(window.location.search);
