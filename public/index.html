@@ -64,6 +64,47 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-nginx-https" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/07/nginx-https/" class="article-date">
+  <time datetime="2020-09-07T08:25:41.000Z" itemprop="datePublished">2020-09-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/07/nginx-https/">nginx配置SSL证书</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="freessl.cn">freessl.cn</a> 是一个提供免费HTTPS证书申请的网站</p>
+<p>填入域名，全部按照默认选项即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  listen 443 ssl;</span><br><span class="line">  server_name breakname.com www.breakname.com;</span><br><span class="line">  ssl         on;</span><br><span class="line"></span><br><span class="line">  # path &#x3D;&#x3D; 你自己机器上的路径</span><br><span class="line"></span><br><span class="line">  root &#x2F;path&#x2F;breakname-com&#x2F;;</span><br><span class="line"></span><br><span class="line">  ssl_certificate &#x2F;path&#x2F;breakname-com&#x2F;breakname.com_chain.crt; # 证书路径</span><br><span class="line">  ssl_certificate_key &#x2F;path&#x2F;breakname-com&#x2F;breakname.com_key.key; # 私钥路径</span><br><span class="line"></span><br><span class="line">  # path &#x3D;&#x3D; 你自己机器上的路径</span><br><span class="line">  location &#x2F;&#123;</span><br><span class="line">    root &#x2F;path&#x2F;build;</span><br><span class="line">    index index.html index.htm;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><font color="#dd0000">如果你用的阿里云服务器：到安全组规则里把 443 端口添加进去</font><br /></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://namehtz.github.io/2020/09/07/nginx-https/" data-id="ckesa6vrf0001zmj5h2lk2leb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-vue-Stretch-div" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/09/02/vue-Stretch-div/" class="article-date">
@@ -277,6 +318,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/09/07/nginx-https/">nginx配置SSL证书</a>
+          </li>
         
           <li>
             <a href="/2020/09/02/vue-Stretch-div/">Vue.js 里拉伸 div</a>
