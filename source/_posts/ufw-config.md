@@ -1,7 +1,9 @@
 ---
 title: Ubuntu防火墙的开启，关闭，端口的打开，查看
+date: 2020-09-10 13:32:48
 tags:
 ---
+
 + 开启防火墙
  ```shell script
 sudo ufw enable
