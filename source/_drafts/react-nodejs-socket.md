@@ -2,7 +2,7 @@
 title: React.js + Node.js + socket.io
 tags: 
 ---
-####准备
+#### 准备
 新建两个项目，一个React.js前端项目, 一个Node.js后端项目
 >前端
 ```shell script
@@ -22,11 +22,11 @@ yarn start
 mkdir node-socket && cd node-socket
 yarn add express socket.io nodemon
 ```
-####前端代码
+#### 前端代码
 ```jsx
 
 ```
-####Node.js代码
+#### Node.js代码
 在package.json中添加启动命令
 ```json
  {
