@@ -38,9 +38,4 @@ $ hexo deploy
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 
-```javascript
-function x() {
-  return 'hello world'
-}
-x()
-```
+hexo publish draft file_name
