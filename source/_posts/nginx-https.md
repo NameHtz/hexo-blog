@@ -1,7 +1,7 @@
 ---
 title: nginx配置SSL证书
 date: 2020-09-07 16:25:41
-tags:
+tags: Nginx
 ---
 
 [freessl.cn](freessl.cn) 是一个提供免费HTTPS证书申请的网站

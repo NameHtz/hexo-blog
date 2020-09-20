@@ -1,7 +1,7 @@
 ---
 title: React生命周期钩子函数
 date: 2020-08-20 23:36:51
-tags: 笔记、react
+tags: React
 ---
 
 ##### 组件生命周期的三个阶段
