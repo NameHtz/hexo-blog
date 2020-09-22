@@ -4,7 +4,7 @@ date: 2020-08-31 08:18:09
 tags: javaScript
 ---
 
-URLSearchParams
+<b class="bgc-e4e6e8">URLSearchParams</b>
 
 ```javascript
 let params = new URLSearchParams(window.location.search);
