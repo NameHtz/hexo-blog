@@ -1372,3 +1372,11 @@ pre .javascript .function {
   margin-right: 5px;
   display: inline-block;
 }
+.bgc-e4e6e8 {
+  padding: 4px;
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 4px;
+  background: #e4e6e8;
+}

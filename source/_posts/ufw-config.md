@@ -1,5 +1,5 @@
 ---
-title: Ubuntu防火墙的开启，关闭，端口的打开，查看
+title: Ubuntu 防火墙
 date: 2020-09-10 13:32:48
 tags: ufw
 ---

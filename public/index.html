@@ -86,11 +86,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Array 里的每一项都满足条件 即返回 true 反之 false；</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> isBelowThreshold = <span class="function">(<span class="params">currentValue</span>) =&gt;</span> currentValue &lt; <span class="number">40</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> array1 = [<span class="number">1</span>, <span class="number">30</span>, <span class="number">39</span>, <span class="number">29</span>, <span class="number">10</span>, <span class="number">13</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(array1.every(isBelowThreshold));  <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <p><b class="bgc-e4e6e8">every()</b> Array 里的每一项都满足条件 即返回 true 反之 false；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> isBelowThreshold = <span class="function">(<span class="params">currentValue</span>) =&gt;</span> currentValue &lt; <span class="number">40</span>;</span><br><span class="line"><span class="keyword">const</span> array1 = [<span class="number">1</span>, <span class="number">30</span>, <span class="number">39</span>, <span class="number">29</span>, <span class="number">10</span>, <span class="number">13</span>];</span><br><span class="line"><span class="built_in">console</span>.log(array1.every(isBelowThreshold));  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
-<p>Array 里只要有一项满足条件 即返回 true，每一项都不满足条件时返回 false；</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> even = <span class="function">(<span class="params">element</span>) =&gt;</span> element % <span class="number">2</span> === <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(array.some(even)); <span class="comment">// true</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><b class="bgc-e4e6e8">some()</b> Array 里只要有一项满足条件 即返回 true，每一项都不满足条件时返回 false；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">const</span> even = <span class="function">(<span class="params">element</span>) =&gt;</span> element % <span class="number">2</span> === <span class="number">0</span>;</span><br><span class="line"><span class="built_in">console</span>.log(array.some(even)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
@@ -128,7 +128,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><mark><b style="background:red">记事本</b></mark></p>
+        <p><b class="bgc-e4e6e8">记录</b></p>
 <p><a target="_blank" rel="noopener" href="https://routinepanic.com/questions/generate-random-string-characters-in-javascript">在 JavaScript 中生成随机字符串 / 字符</a></p>
 
       
@@ -168,14 +168,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="从项目整体看"><a href="#从项目整体看" class="headerlink" title="从项目整体看"></a>从项目整体看</h5><ol>
+        <ul>
+<li><h5 id="从项目整体看"><a href="#从项目整体看" class="headerlink" title="从项目整体看"></a>从项目整体看</h5></li>
+</ul>
+<ol>
 <li>用户的使用方式复杂</li>
 <li>不同身份的用户有不同的使用方式（比如普通用户和管理员）</li>
 <li>多个用户之间可以协作</li>
 <li>与服务器大量交互，或者使用了WebSocket</li>
 <li>View要从多个来源获取数据</li>
 </ol>
-<h5 id="从组件角度看"><a href="#从组件角度看" class="headerlink" title="从组件角度看"></a>从组件角度看</h5><ol>
+<ul>
+<li><h5 id="从组件角度看"><a href="#从组件角度看" class="headerlink" title="从组件角度看"></a>从组件角度看</h5></li>
+</ul>
+<ol>
 <li>某个组件的状态，需要共享</li>
 <li>某个状态需要在任何地方都可以拿到</li>
 <li>一个组件需要改变全局状态</li>
@@ -340,9 +346,9 @@
 
 
   
-    <article id="post-nginx-https" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ssl-https" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/09/07/nginx-https/" class="article-date">
+    <a href="/2020/09/07/ssl-https/" class="article-date">
   <time datetime="2020-09-07T08:25:41.000Z" itemprop="datePublished">2020-09-07</time>
 </a>
     
@@ -354,7 +360,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/07/nginx-https/">nginx配置SSL证书</a>
+      <a class="article-title" href="/2020/09/07/ssl-https/">SSL证书</a>
     </h1>
   
 
@@ -362,16 +368,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="freessl.cn">freessl.cn</a> 是一个提供免费HTTPS证书申请的网站</p>
+        <ul>
+<li>前言</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://freessl.cn/">freessl.cn</a> 是一个提供免费HTTPS证书申请的网站；</p>
+<p>个人网站如果购买证书，成本还是比较高的（毕竟个人网站不盈利），偶然发现可以申请免费证书，并且流程很简单，于是就找了个时间尝试搞了一下；</p>
         
           <p class="article-more-link">
-            <a href="/2020/09/07/nginx-https/#more">阅读全文</a>
+            <a href="/2020/09/07/ssl-https/#more">阅读全文</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://namehtz.github.io/2020/09/07/nginx-https/" data-id="ckesa6vrf0001zmj5h2lk2leb" class="article-share-link">Share</a>
+      <a data-url="https://namehtz.github.io/2020/09/07/ssl-https/" data-id="ckfdbg3ed0000r7j5bpzn6w83" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li></ul>
@@ -405,7 +415,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在Vue.js里拉伸div以显示更多内容</p>
+        <p>在Vue.js里拉伸div显示更多内容</p>
         
           <p class="article-more-link">
             <a href="/2020/09/02/vue-Stretch-div/#more">阅读全文</a>
@@ -448,7 +458,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>URLSearchParams</p>
+        <p><b class="bgc-e4e6e8">URLSearchParams</b></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> params = <span class="keyword">new</span> URLSearchParams(<span class="built_in">window</span>.location.search);</span><br><span class="line">params.has(<span class="string">&#x27;name&#x27;</span>) <span class="comment">// true</span></span><br><span class="line">params.get(<span class="string">&#x27;name&#x27;</span>) <span class="comment">// js</span></span><br><span class="line"></span><br><span class="line">params.set(<span class="string">&#x27;age&#x27;</span>, <span class="string">&#x27;24&#x27;</span>);</span><br><span class="line">params.toString(); <span class="comment">// name=js&amp;age=24</span></span><br><span class="line"></span><br><span class="line">params.delete(<span class="string">&#x27;age&#x27;</span>);</span><br><span class="line">params.toString(); <span class="comment">// name=js</span></span><br><span class="line"> </span><br></pre></td></tr></table></figure>
       
     </div>
@@ -487,7 +497,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>localeCompare() 方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。</p>
+        <p><b class="bgc-e4e6e8">localeCompare()</b>方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。</p>
         
           <p class="article-more-link">
             <a href="/2020/08/25/chinese-initials-sort/#more">阅读全文</a>

@@ -36,9 +36,7 @@ export default function rename(path?: string): void {
     }
   }
 }
-```
 
-```typescript
 /** 
  * 参数为要修改文件夹的路径
  * 🌰

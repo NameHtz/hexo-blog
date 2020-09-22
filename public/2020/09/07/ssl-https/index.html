@@ -5,17 +5,17 @@
   
 
   
-  <title>nginx配置SSL证书 | </title>
+  <title>SSL证书 | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="freessl.cn 是一个提供免费HTTPS证书申请的网站">
+  <meta name="description" content="前言  freessl.cn 是一个提供免费HTTPS证书申请的网站； 个人网站如果购买证书，成本还是比较高的（毕竟个人网站不盈利），偶然发现可以申请免费证书，并且流程很简单，于是就找了个时间尝试搞了一下；">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nginx配置SSL证书">
-<meta property="og:url" content="https://namehtz.github.io/2020/09/07/nginx-https/index.html">
+<meta property="og:title" content="SSL证书">
+<meta property="og:url" content="https://namehtz.github.io/2020/09/07/ssl-https/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="freessl.cn 是一个提供免费HTTPS证书申请的网站">
+<meta property="og:description" content="前言  freessl.cn 是一个提供免费HTTPS证书申请的网站； 个人网站如果购买证书，成本还是比较高的（毕竟个人网站不盈利），偶然发现可以申请免费证书，并且流程很简单，于是就找了个时间尝试搞了一下；">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-07T08:25:41.000Z">
-<meta property="article:modified_time" content="2020-09-20T14:33:50.909Z">
+<meta property="article:modified_time" content="2020-09-22T02:00:48.267Z">
 <meta property="article:author" content="yang">
 <meta property="article:tag" content="Nginx">
 <meta name="twitter:card" content="summary">
@@ -67,9 +67,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-nginx-https" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-ssl-https" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/09/07/nginx-https/" class="article-date">
+    <a href="/2020/09/07/ssl-https/" class="article-date">
   <time datetime="2020-09-07T08:25:41.000Z" itemprop="datePublished">2020-09-07</time>
 </a>
     
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      nginx配置SSL证书
+      SSL证书
     </h1>
   
 
@@ -89,14 +89,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="freessl.cn">freessl.cn</a> 是一个提供免费HTTPS证书申请的网站</p>
+        <ul>
+<li>前言</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://freessl.cn/">freessl.cn</a> 是一个提供免费HTTPS证书申请的网站；</p>
+<p>个人网站如果购买证书，成本还是比较高的（毕竟个人网站不盈利），偶然发现可以申请免费证书，并且流程很简单，于是就找了个时间尝试搞了一下；</p>
 <a id="more"></a>
-
-<p>填入要申请证书的域名，全部按照默认选项即可</p>
+<ul>
+<li>申请证书</li>
+</ul>
+<ol>
+<li><p>填入要申请证书的域名</p>
+</li>
+<li><p>品牌选择：<b class="bgc-e4e6e8">亚洲诚信</b> // 双域名 有效期一年 （默认就是这个选项，到期需要手动续期）</p>
+</li>
+<li><p>点击（创建免费的SSL证书）</p>
+</li>
+<li><p>这一步需要选择 <b class="bgc-e4e6e8">证书类型</b>（RSA ｜ ECC）、<b class="bgc-e4e6e8">验证类型</b>（DNS ｜ 文件验证）、<b class="bgc-e4e6e8">CSR生成</b>（离线生成 ｜ 一键申请 ｜ 浏览器生成 ｜ 我有CSR），按照默认选项, 填入邮箱（点击创建）；</p>
+</li>
+<li><p>创建之后，需要在<b class="bgc-e4e6e8">域名解析</b>按照提示添加一条记录（这一步是为了验证域名是你的）</p>
+</li>
+<li><p>验证成功后，就可以把域名导出到 <b class="bgc-e4e6e8">KeyManager </b>；（KeyManager需要安装）</p>
+</li>
+<li><p>KeyManager –&gt; 证书管理 –&gt; 证书请求， <b class="bgc-e4e6e8">颁发状态</b> 是 <b class="bgc-e4e6e8">已颁发</b> 就是申请成功了；</p>
+</li>
+</ol>
+<ul>
+<li>导出证书</li>
+</ul>
+<p>KeyManager –&gt; 证书管理 –&gt; 证书请求 –&gt; 操作–更多–详情–&gt;查看证书（右下角）–&gt; 导出证书</p>
+<ul>
+<li>上传到服务器</li>
+</ul>
+<p>scp &lt;本地文件名&gt; &lt;用户名&gt;@&lt;服务器IP&gt;:&lt;上传保存路径即文件名&gt;</p>
+<p>🌰</p>
+<figure class="highlight shell"><figcaption><span>script</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scp /documents/file.zip root@127.0.0.1:/root </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 把本地documents文件夹下的file.zip，用127.0.0.1的root用户上传到服务器的root目录下</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>配置Nginx</li>
+</ul>
 <p>在 nginx 目录下 conf.d 文件夹里新建 443.conf 配置文件，文件内容如下 </p>
-<!-- more -->
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  listen 443 ssl;</span><br><span class="line">  server_name breakname.com www.breakname.com;</span><br><span class="line">  ssl         on;</span><br><span class="line"></span><br><span class="line">  # path &#x3D;&#x3D; 你自己机器上的路径,对应文件的存放位置</span><br><span class="line"></span><br><span class="line">  root &#x2F;path&#x2F;breakname-com&#x2F;;</span><br><span class="line"></span><br><span class="line">  ssl_certificate &#x2F;path&#x2F;breakname-com&#x2F;breakname.com_chain.crt; # 证书路径</span><br><span class="line">  ssl_certificate_key &#x2F;path&#x2F;breakname-com&#x2F;breakname.com_key.key; # 私钥路径</span><br><span class="line"></span><br><span class="line">  # path &#x3D;&#x3D; 你自己机器上的路径,对应文件的存放位置</span><br><span class="line">  location &#x2F;&#123;</span><br><span class="line">    root &#x2F;path&#x2F;build;</span><br><span class="line">    index index.html index.htm;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>🌰</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  listen 443 ssl;</span><br><span class="line">  server_name breakname.com www.breakname.com;</span><br><span class="line">  ssl         on;</span><br><span class="line"></span><br><span class="line">  # path &#x3D;&#x3D; 你自己机器上的路径,对应文件的存放位置</span><br><span class="line"></span><br><span class="line">  root &#x2F;path&#x2F;breakname-com&#x2F;;</span><br><span class="line"></span><br><span class="line">  ssl_certificate &#x2F;path&#x2F;breakname-com&#x2F;breakname.com_chain.crt; # 证书路径</span><br><span class="line">  ssl_certificate_key &#x2F;path&#x2F;breakname-com&#x2F;breakname.com_key.key; # 私钥路径</span><br><span class="line"></span><br><span class="line">  # path &#x3D;&#x3D; 你自己机器上的路径,对应文件的存放位置</span><br><span class="line">  location &#x2F;&#123;</span><br><span class="line">    root &#x2F;path&#x2F;build;</span><br><span class="line">    index index.html index.htm;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>检查nginx配置文件 </p>
 <figure class="highlight shell"><figcaption><span>script</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> nginx: the configuration file /etc/nginx/nginx.conf syntax is ok</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> nginx: configuration file /etc/nginx/nginx.conf <span class="built_in">test</span> is successful</span></span><br></pre></td></tr></table></figure>
 <p>重启nginx; </p>
@@ -113,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://namehtz.github.io/2020/09/07/nginx-https/" data-id="ckesa6vrf0001zmj5h2lk2leb" class="article-share-link">Share</a>
+      <a data-url="https://namehtz.github.io/2020/09/07/ssl-https/" data-id="ckfdbg3ed0000r7j5bpzn6w83" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li></ul>

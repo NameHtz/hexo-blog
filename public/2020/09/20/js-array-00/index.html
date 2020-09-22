@@ -7,15 +7,15 @@
   
   <title>javaScript Array some every | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Array 里的每一项都满足条件 即返回 true 反之 false； 12345678const isBelowThreshold &#x3D; (currentValue) &#x3D;&gt; currentValue &lt; 40;const array1 &#x3D; [1, 30, 39, 29, 10, 13];console.log(array1.every(isBelowThreshold));  &#x2F;&#x2F; t">
+  <meta name="description" content="every() Array 里的每一项都满足条件 即返回 true 反之 false； 123const isBelowThreshold &#x3D; (currentValue) &#x3D;&gt; currentValue &lt; 40;const array1 &#x3D; [1, 30, 39, 29, 10, 13];console.log(array1.every(isBelowThreshold));  &#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javaScript Array some every">
 <meta property="og:url" content="https://namehtz.github.io/2020/09/20/js-array-00/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Array 里的每一项都满足条件 即返回 true 反之 false； 12345678const isBelowThreshold &#x3D; (currentValue) &#x3D;&gt; currentValue &lt; 40;const array1 &#x3D; [1, 30, 39, 29, 10, 13];console.log(array1.every(isBelowThreshold));  &#x2F;&#x2F; t">
+<meta property="og:description" content="every() Array 里的每一项都满足条件 即返回 true 反之 false； 123const isBelowThreshold &#x3D; (currentValue) &#x3D;&gt; currentValue &lt; 40;const array1 &#x3D; [1, 30, 39, 29, 10, 13];console.log(array1.every(isBelowThreshold));  &#x2F;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-20T14:47:42.000Z">
-<meta property="article:modified_time" content="2020-09-20T14:47:42.629Z">
+<meta property="article:modified_time" content="2020-09-21T10:58:29.394Z">
 <meta property="article:author" content="yang">
 <meta property="article:tag" content="javaScript">
 <meta name="twitter:card" content="summary">
@@ -89,11 +89,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Array 里的每一项都满足条件 即返回 true 反之 false；</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> isBelowThreshold = <span class="function">(<span class="params">currentValue</span>) =&gt;</span> currentValue &lt; <span class="number">40</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> array1 = [<span class="number">1</span>, <span class="number">30</span>, <span class="number">39</span>, <span class="number">29</span>, <span class="number">10</span>, <span class="number">13</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(array1.every(isBelowThreshold));  <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <p><b class="bgc-e4e6e8">every()</b> Array 里的每一项都满足条件 即返回 true 反之 false；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> isBelowThreshold = <span class="function">(<span class="params">currentValue</span>) =&gt;</span> currentValue &lt; <span class="number">40</span>;</span><br><span class="line"><span class="keyword">const</span> array1 = [<span class="number">1</span>, <span class="number">30</span>, <span class="number">39</span>, <span class="number">29</span>, <span class="number">10</span>, <span class="number">13</span>];</span><br><span class="line"><span class="built_in">console</span>.log(array1.every(isBelowThreshold));  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
-<p>Array 里只要有一项满足条件 即返回 true，每一项都不满足条件时返回 false；</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> even = <span class="function">(<span class="params">element</span>) =&gt;</span> element % <span class="number">2</span> === <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(array.some(even)); <span class="comment">// true</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><b class="bgc-e4e6e8">some()</b> Array 里只要有一项满足条件 即返回 true，每一项都不满足条件时返回 false；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">const</span> even = <span class="function">(<span class="params">element</span>) =&gt;</span> element % <span class="number">2</span> === <span class="number">0</span>;</span><br><span class="line"><span class="built_in">console</span>.log(array.some(even)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
