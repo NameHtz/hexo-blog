@@ -26,7 +26,7 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 <body>
   <div id="container">
@@ -64,6 +64,316 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-js-array-min-max" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/23/js-array-min-max/" class="article-date">
+  <time datetime="2020-09-23T02:35:30.000Z" itemprop="datePublished">2020-09-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/23/js-array-min-max/">JS Array 里找出，最大值、最小值</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h4><ul>
+<li>max<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">max</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, arr);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> list = [<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">9</span>];</span><br><span class="line">max(list) <span class="comment">// 9</span></span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2020/09/23/js-array-min-max/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://namehtz.github.io/2020/09/23/js-array-min-max/" data-id="ckfes0cg10003xcj5dkg32psz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaScript/" rel="tag">javaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git-merge-abort" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/23/git-merge-abort/" class="article-date">
+  <time datetime="2020-09-23T02:33:15.000Z" itemprop="datePublished">2020-09-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/23/git-merge-abort/">如何撤消有冲突的git merge</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/5741407/how-to-undo-a-git-merge-with-conflicts">How to undo a git merge with conflicts</a></p>
+<p>最新的Git:</p>
+<figure class="highlight shell"><figcaption><span>script</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge --abort</span><br></pre></td></tr></table></figure>
+<p>将会把当前工作空间重置到合并之前的状态，这意味着，如果有未提交的代码，将会丢失</p>
+<p>1.7.4：</p>
+<figure class="highlight shell"><figcaption><span>script</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --merge</span><br></pre></td></tr></table></figure>
+<p>功能和<b class="bgc-e4e6e8">git merge –abort</b>相同</p>
+<p>1.6.2之前：</p>
+<figure class="highlight shell"><figcaption><span>script</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard</span><br></pre></td></tr></table></figure>
+<p>删除所有未提交的更改，包括未提交的合并</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://namehtz.github.io/2020/09/23/git-merge-abort/" data-id="ckfes0cfy0001xcj5919b5fag" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git-commit-emoji" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/23/git-commit-emoji/" class="article-date">
+  <time datetime="2020-09-23T02:32:52.000Z" itemprop="datePublished">2020-09-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/23/git-commit-emoji/">git commit emoji</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <table>
+<thead>
+<tr>
+<th align="left">Commit type</th>
+<th align="left">Emoji</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Initial commit</td>
+<td align="left">🎉 <code>:tada:</code></td>
+</tr>
+<tr>
+<td align="left">Version tag</td>
+<td align="left">🔖 <code>:bookmark:</code></td>
+</tr>
+<tr>
+<td align="left">New feature</td>
+<td align="left">✨ <code>:sparkles:</code></td>
+</tr>
+<tr>
+<td align="left">Bugfix</td>
+<td align="left">🐛 <code>:bug:</code></td>
+</tr>
+<tr>
+<td align="left">Metadata</td>
+<td align="left">📇 <code>:card_index:</code></td>
+</tr>
+<tr>
+<td align="left">Documentation</td>
+<td align="left">📚 <code>:books:</code></td>
+</tr>
+<tr>
+<td align="left">Documenting source code</td>
+<td align="left">💡 <code>:bulb:</code></td>
+</tr>
+<tr>
+<td align="left">Performance</td>
+<td align="left">🐎 <code>:racehorse:</code></td>
+</tr>
+<tr>
+<td align="left">Cosmetic</td>
+<td align="left">💄 <code>:lipstick:</code></td>
+</tr>
+<tr>
+<td align="left">Tests</td>
+<td align="left">🚨 <code>:rotating_light:</code></td>
+</tr>
+<tr>
+<td align="left">Adding a test</td>
+<td align="left">✅ <code>:white_check_mark:</code></td>
+</tr>
+<tr>
+<td align="left">Make a test pass</td>
+<td align="left">✔️ <code>:heavy_check_mark:</code></td>
+</tr>
+<tr>
+<td align="left">General update</td>
+<td align="left">⚡ <code>:zap:</code></td>
+</tr>
+<tr>
+<td align="left">Improve format/structure</td>
+<td align="left">🎨 <code>:art:</code></td>
+</tr>
+<tr>
+<td align="left">Refactor code</td>
+<td align="left">🔨 <code>:hammer:</code></td>
+</tr>
+<tr>
+<td align="left">Removing code/files</td>
+<td align="left">🔥 <code>:fire:</code></td>
+</tr>
+<tr>
+<td align="left">Continuous Integration</td>
+<td align="left">💚 <code>:green_heart:</code></td>
+</tr>
+<tr>
+<td align="left">Security</td>
+<td align="left">🔒 <code>:lock:</code></td>
+</tr>
+<tr>
+<td align="left">Upgrading dependencies</td>
+<td align="left">⬆️ <code>:arrow_up:</code></td>
+</tr>
+<tr>
+<td align="left">Downgrading dependencies</td>
+<td align="left">⬇️ <code>:arrow_down:</code></td>
+</tr>
+<tr>
+<td align="left">Lint</td>
+<td align="left">👕 <code>:shirt:</code></td>
+</tr>
+<tr>
+<td align="left">Translation</td>
+<td align="left">👽 <code>:alien:</code></td>
+</tr>
+<tr>
+<td align="left">Text</td>
+<td align="left">📝 <code>:pencil:</code></td>
+</tr>
+<tr>
+<td align="left">Critical hotfix</td>
+<td align="left">🚑 <code>:ambulance:</code></td>
+</tr>
+<tr>
+<td align="left">Deploying stuff</td>
+<td align="left">🚀 <code>:rocket:</code></td>
+</tr>
+<tr>
+<td align="left">Fixing on MacOS</td>
+<td align="left">🍎 <code>:apple:</code></td>
+</tr>
+<tr>
+<td align="left">Fixing on Linux</td>
+<td align="left">🐧 <code>:penguin:</code></td>
+</tr>
+<tr>
+<td align="left">Fixing on Windows</td>
+<td align="left">🏁 <code>:checkered_flag:</code></td>
+</tr>
+<tr>
+<td align="left">Work in progress</td>
+<td align="left">🚧 <code>:construction:</code></td>
+</tr>
+<tr>
+<td align="left">Adding CI build system</td>
+<td align="left">👷 <code>:construction_worker:</code></td>
+</tr>
+<tr>
+<td align="left">Analytics or tracking code</td>
+<td align="left">📈 <code>:chart_with_upwards_trend:</code></td>
+</tr>
+<tr>
+<td align="left">Removing a dependency</td>
+<td align="left">➖ <code>:heavy_minus_sign:</code></td>
+</tr>
+<tr>
+<td align="left">Adding a dependency</td>
+<td align="left">➕ <code>:heavy_plus_sign:</code></td>
+</tr>
+<tr>
+<td align="left">Docker</td>
+<td align="left">🐳 <code>:whale:</code></td>
+</tr>
+<tr>
+<td align="left">Configuration files</td>
+<td align="left">🔧 <code>:wrench:</code></td>
+</tr>
+<tr>
+<td align="left">Package.json in JS</td>
+<td align="left">📦 <code>:package:</code></td>
+</tr>
+<tr>
+<td align="left">Merging branches</td>
+<td align="left">🔀 <code>:twisted_rightwards_arrows:</code></td>
+</tr>
+<tr>
+<td align="left">Bad code / need improv.</td>
+<td align="left">💩 <code>:hankey:</code></td>
+</tr>
+<tr>
+<td align="left">Reverting changes</td>
+<td align="left">⏪ <code>:rewind:</code></td>
+</tr>
+<tr>
+<td align="left">Breaking changes</td>
+<td align="left">💥 <code>:boom:</code></td>
+</tr>
+<tr>
+<td align="left">Code review changes</td>
+<td align="left">👌 <code>:ok_hand:</code></td>
+</tr>
+<tr>
+<td align="left">Accessibility</td>
+<td align="left">♿ <code>:wheelchair:</code></td>
+</tr>
+<tr>
+<td align="left">Move/rename repository</td>
+<td align="left">🚚 <code>:truck:</code></td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://namehtz.github.io/2020/09/23/git-commit-emoji/" data-id="ckfes0cfs0000xcj520bpcywa" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-js-array-00" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/09/20/js-array-00/" class="article-date">
@@ -94,7 +404,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://namehtz.github.io/2020/09/20/js-array-00/" data-id="ckfb7t5tf000jjij55s0b1pwe" class="article-share-link">Share</a>
+      <a data-url="https://namehtz.github.io/2020/09/20/js-array-00/" data-id="ckfdpmsk7000hnhj53ry19s46" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaScript/" rel="tag">javaScript</a></li></ul>
@@ -134,7 +444,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://namehtz.github.io/2020/09/17/javascript-random-string/" data-id="ckf6fje2p0000gqj53k5v6w1l" class="article-share-link">Share</a>
+      <a data-url="https://namehtz.github.io/2020/09/17/javascript-random-string/" data-id="ckfdpmsk20009nhj5dfye7nl2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaScript/" rel="tag">javaScript</a></li></ul>
@@ -191,7 +501,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://namehtz.github.io/2020/09/17/when-to-use-state-management-in-react/" data-id="ckf6fje3c0001gqj5ggwy7az1" class="article-share-link">Share</a>
+      <a data-url="https://namehtz.github.io/2020/09/17/when-to-use-state-management-in-react/" data-id="ckfdpmskd000unhj5a5ob6ihj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/" rel="tag">React</a></li></ul>
@@ -225,8 +535,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-文件和目录"><a href="#1-文件和目录" class="headerlink" title="1. 文件和目录"></a><font color="#dd0000">1. 文件和目录</font></h3><p><font color="#dd0000">1.1</font><b class="bgc-e4e6e8">cd</b>命令，用于切换当前目录，它的参数是要切换到的目录的路径，可以是绝对路径，也可以是相对路径。</p>
-<figure class="highlight shell"><figcaption><span>script</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd /home    #进入 &#x27;/home&#x27; 目录</span><br><span class="line">cd ..       #返回上一级目录 </span><br><span class="line">cd ../..    #返回上两级目录 </span><br><span class="line">cd          #进入个人的主目录 </span><br><span class="line">cd ~user1   #进入个人的主目录 </span><br><span class="line">cd -        #返回上次所在的目录</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h3 id="1-文件和目录"><a href="#1-文件和目录" class="headerlink" title="1. 文件和目录"></a><font color="#dd0000">1. 文件和目录</font></h3><p><font color="#dd0000">1.1</font> <code>cd</code> 命令，用于切换当前目录，它的参数是要切换到的目录的路径，可以是绝对路径，也可以是相对路径。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd /home    #进入 &#x27;/home&#x27; 目录</span><br><span class="line">cd ..       #返回上一级目录 </span><br><span class="line">cd ../..    #返回上两级目录 </span><br><span class="line">cd          #进入个人的主目录 </span><br><span class="line">cd ~user1   #进入个人的主目录 </span><br><span class="line">cd -        #返回上次所在的目录</span><br></pre></td></tr></table></figure>
         
           <p class="article-more-link">
             <a href="/2020/09/16/linux-command/#more">阅读全文</a>
@@ -235,7 +545,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://namehtz.github.io/2020/09/16/linux-command/" data-id="ckf50i05m0000mlj5dpvkbzb0" class="article-share-link">Share</a>
+      <a data-url="https://namehtz.github.io/2020/09/16/linux-command/" data-id="ckfdpmsk4000cnhj52yu871xe" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
@@ -291,7 +601,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://namehtz.github.io/2020/09/10/ufw-config/" data-id="ckewdo69t0000gij5b6o4c052" class="article-share-link">Share</a>
+      <a data-url="https://namehtz.github.io/2020/09/10/ufw-config/" data-id="ckfdpmsk9000mnhj58fiidupo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ufw/" rel="tag">ufw</a></li></ul>
@@ -334,7 +644,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://namehtz.github.io/2020/09/08/node-rename-file/" data-id="cketn1bgo0000qfj5bja9763d" class="article-share-link">Share</a>
+      <a data-url="https://namehtz.github.io/2020/09/08/node-rename-file/" data-id="ckfdpmsk5000enhj5eu0u594p" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li></ul>
@@ -381,135 +691,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://namehtz.github.io/2020/09/07/ssl-https/" data-id="ckfdbg3ed0000r7j5bpzn6w83" class="article-share-link">Share</a>
+      <a data-url="https://namehtz.github.io/2020/09/07/ssl-https/" data-id="ckfdpmska000onhj50z087p2f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-vue-Stretch-div" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/02/vue-Stretch-div/" class="article-date">
-  <time datetime="2020-09-02T06:35:06.000Z" itemprop="datePublished">2020-09-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/02/vue-Stretch-div/">Vue.js 里拉伸 div</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在Vue.js里拉伸div显示更多内容</p>
-        
-          <p class="article-more-link">
-            <a href="/2020/09/02/vue-Stretch-div/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://namehtz.github.io/2020/09/02/vue-Stretch-div/" data-id="ckel0iyvu000058j50i84btpj" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-url-search-params" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/08/31/url-search-params/" class="article-date">
-  <time datetime="2020-08-31T00:18:09.000Z" itemprop="datePublished">2020-08-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/31/url-search-params/">URLSearchParams</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><b class="bgc-e4e6e8">URLSearchParams</b></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> params = <span class="keyword">new</span> URLSearchParams(<span class="built_in">window</span>.location.search);</span><br><span class="line">params.has(<span class="string">&#x27;name&#x27;</span>) <span class="comment">// true</span></span><br><span class="line">params.get(<span class="string">&#x27;name&#x27;</span>) <span class="comment">// js</span></span><br><span class="line"></span><br><span class="line">params.set(<span class="string">&#x27;age&#x27;</span>, <span class="string">&#x27;24&#x27;</span>);</span><br><span class="line">params.toString(); <span class="comment">// name=js&amp;age=24</span></span><br><span class="line"></span><br><span class="line">params.delete(<span class="string">&#x27;age&#x27;</span>);</span><br><span class="line">params.toString(); <span class="comment">// name=js</span></span><br><span class="line"> </span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://namehtz.github.io/2020/08/31/url-search-params/" data-id="ckehs2f4t0001p6j50f4leqcs" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaScript/" rel="tag">javaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-chinese-initials-sort" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/08/25/chinese-initials-sort/" class="article-date">
-  <time datetime="2020-08-25T10:57:06.000Z" itemprop="datePublished">2020-08-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/25/chinese-initials-sort/">按照中文拼音首字母顺序排序</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><b class="bgc-e4e6e8">localeCompare()</b>方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。</p>
-        
-          <p class="article-more-link">
-            <a href="/2020/08/25/chinese-initials-sort/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://namehtz.github.io/2020/08/25/chinese-initials-sort/" data-id="ckearkqgr0001yij58tgl0xjb" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaScript/" rel="tag">javaScript</a></li></ul>
 
     </footer>
   </div>
@@ -536,7 +721,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/" rel="tag">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ufw/" rel="tag">ufw</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/" rel="tag">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ufw/" rel="tag">ufw</a></li></ul>
     </div>
   </div>
 
@@ -546,7 +731,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Nginx/" style="font-size: 10px;">Nginx</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/React/" style="font-size: 15px;">React</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/javaScript/" style="font-size: 20px;">javaScript</a> <a href="/tags/ufw/" style="font-size: 10px;">ufw</a>
+      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Nginx/" style="font-size: 10px;">Nginx</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/React/" style="font-size: 15px;">React</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/javaScript/" style="font-size: 20px;">javaScript</a> <a href="/tags/ufw/" style="font-size: 10px;">ufw</a>
     </div>
   </div>
 
@@ -568,23 +753,23 @@
       <ul>
         
           <li>
+            <a href="/2020/09/23/js-array-min-max/">JS Array 里找出，最大值、最小值</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/23/git-merge-abort/">如何撤消有冲突的git merge</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/23/git-commit-emoji/">git commit emoji</a>
+          </li>
+        
+          <li>
             <a href="/2020/09/20/js-array-00/">javaScript Array some every</a>
           </li>
         
           <li>
             <a href="/2020/09/17/javascript-random-string/">javaScript 随机生成字符串</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/17/when-to-use-state-management-in-react/">什么时候在react里用状态管理器</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/16/linux-command/">Linux 命令</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/10/ufw-config/">Ubuntu 防火墙</a>
           </li>
         
       </ul>
