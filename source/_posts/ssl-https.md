@@ -30,7 +30,7 @@ KeyManager --> 证书管理 --> 证书请求 --> 操作--更多--详情-->查看
 scp <本地文件名> <用户名>@<服务器IP>:<上传保存路径即文件名>
 
 🌰
-```shell script
+```
 scp /documents/file.zip root@127.0.0.1:/root 
 
 # 把本地documents文件夹下的file.zip，用127.0.0.1的root用户上传到服务器的root目录下
@@ -61,14 +61,14 @@ server {
 }
 ```
 检查nginx配置文件 
-```shell script
+```
 nginx -t
 
 # nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 # nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 重启nginx; 
-```shell script
+```
 nginx -s reload
 ```
 去浏览器访问自己网站，如果通过https可以访问到，那就是配置成功了; /手动狗头

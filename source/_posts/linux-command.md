@@ -7,28 +7,27 @@ tags: Linux
 
 ###  <font color="#dd0000">1. 文件和目录</font>
 
-<font color="#dd0000">1.1</font><b class="bgc-e4e6e8">cd</b>命令，用于切换当前目录，它的参数是要切换到的目录的路径，可以是绝对路径，也可以是相对路径。
+<font color="#dd0000">1.1</font> `cd` 命令，用于切换当前目录，它的参数是要切换到的目录的路径，可以是绝对路径，也可以是相对路径。
 
-```shell script
+```shell
 cd /home    #进入 '/home' 目录
 cd ..       #返回上一级目录 
 cd ../..    #返回上两级目录 
 cd          #进入个人的主目录 
 cd ~user1   #进入个人的主目录 
 cd -        #返回上次所在的目录
-
 ```
 <!--more -->
-<font color="#dd0000">1.2 </font><b class="bgc-e4e6e8">pwd</b>命令，显示工作路径
+<font color="#dd0000">1.2 </font> `pwd` 命令，显示工作路径
 
-```shell script
+```shell
 [root@mailvip ~]# pwd
 /root
 ```
 
-<font color="#dd0000">1.3</font><b class="bgc-e4e6e8">ls</b>命令，查看文件与目录的命令，list之意
+<font color="#dd0000">1.3</font> `ls` 命令，查看文件与目录的命令，list之意
 
-```shell script
+```shell
 ls       #查看目录中的文件 
 ls -l    #显示文件和目录的详细资料 
 ls -a    #列出全部文件，包含隐藏文件
@@ -36,29 +35,27 @@ ls -R    #连同子目录的内容一起列出（递归列出），等于该目�
 ls [0-9] #显示包含数字的文件名和目录名
 ```
 
-<font color="#dd0000">1.4</font><b class="bgc-e4e6e8">cp</b>命令，用于复制文件，copy之意，它还可以把多个文件一次性地复制到一个目录下
+<font color="#dd0000">1.4</font> `cp` 命令，用于复制文件，copy之意，它还可以把多个文件一次性地复制到一个目录下
 
-```shell script
-
+```shell
 -a   #将文件的特性一起复制
 -p   #连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份
 -i   #若目标文件已经存在时，在覆盖时会先询问操作的进行
 -r   #递归持续复制，用于目录的复制行为 //经常使用递归复制
 -u   #目标文件与源文件有差异时才会复制
-
 ```
 
-<font color="#dd0000">1.5</font><b class="bgc-e4e6e8">mv</b>命令，用于移动文件、目录或更名，move之意
+<font color="#dd0000">1.5</font> `mv` 命令，用于移动文件、目录或更名，move之意
 
-```shell script
+```shell
 -f   #force强制的意思，如果目标文件已经存在，不会询问而直接覆盖
 -i   #若目标文件已经存在，就会询问是否覆盖
 -u   #若目标文件已经存在，且比目标文件新，才会更新
 ```
 
-<font color="#dd0000">1.6</font><b class="bgc-e4e6e8">rm</b>命令，用于删除文件或目录，remove之意
+<font color="#dd0000">1.6</font> `rm` 命令，用于删除文件或目录，`remove` 之意
 
-```shell script
+```shell
 -f   #就是force的意思，忽略不存在的文件，不会出现警告消息
 -i   #互动模式，在删除前会询问用户是否操作
 -r   #递归删除，最常用于目录删除，它是一个非常危险的参数
@@ -66,9 +63,9 @@ ls [0-9] #显示包含数字的文件名和目录名
 
 ###  <font color="#dd0000">2. 查看文件内容</font>
 
-<font color="#dd0000">2.1</font><b class="bgc-e4e6e8">cat</b>命令，用于查看文本文件的内容，后接要查看的文件名，通常可用管道与more和less一起使用
+<font color="#dd0000">2.1</font> `cat` 命令，用于查看文本文件的内容，后接要查看的文件名，通常可用管道与`more`和`less`一起使用
 
-```shell script
+```shell
 cat file1     #从第一个字节开始正向查看文件的内容 
 tac file1     #从最后一行开始反向查看一个文件的内容 
 cat -n file1  #标示文件的行数 
@@ -83,9 +80,9 @@ cat filename | tail -n +3000 | head -n 1000  #从第3000行开始，显示1000(�
 
 ###  <font color="#dd0000">3. 文件搜索</font>
 
-<font color="#dd0000">3.1</font><b class="bgc-e4e6e8">find</b>命令，用来查找系统的
+<font color="#dd0000">3.1</font> `find` 命令，用来查找系统的
 
-```shell script
+```shell
 find / -name file1                  #从 '/' 开始进入根文件系统搜索文件和目录 
 find / -user user1                  #搜索属于用户 'user1' 的文件和目录 
 find /usr/bin -type f -atime +100   #搜索在过去100天内未被使用过的执行文件 
@@ -96,37 +93,37 @@ which halt       #显示一个二进制文件或可执行文件的完整路径
 
 <font color="#dd0000">3.2</font> 删除大于50M的文件：
 
-```shell script
+```shell
 find /var/mail/ -size +50M -exec rm {} ＼;
 ```
 
 ### <font color="#dd000"> 4. 文件的权限 - 使用 "+" 设置权限，使用 "-" 用于取消</font>
 
-<font color="#dd0000">4.1</font><b class="bgc-e4e6e8">chmod</b>命令，改变文件/文件夹权限
-```shell script
+<font color="#dd0000">4.1</font> `chmod` 命令，改变文件/文件夹权限
+```shell
 ls -lh                     #显示权限 
 chmod ugo+rwx directory1   #设置目录的所有人(u)、群组(g)以及其他人(o)以读（r，4 ）、写(w，2)和执行(x，1)的权限 
 chmod go-rwx directory1    #删除群组(g)与其他人(o)对目录的读写执行权限
 ```
 
-<font color="#dd0000">4.2</font><b class="bgc-e4e6e8">chown</b>命令，改变文件的所有者
+<font color="#dd0000">4.2</font> `chown` 命令，改变文件的所有者
 
-```shell script
+```shell
 chown user1 file1          #改变一个文件的所有人属性 
 chown -R user1 directory1  #改变一个目录的所有人属性并同时改变改目录下所有文件的属性 
 chown user1:group1 file1   #改变一个文件的所有人和群组属性
 ```
 
-<font color="#dd0000">4.3</font><b class="bgc-e4e6e8">chgrp</b>命令，改变文件所属用户组
-```shell script
+<font color="#dd0000">4.3</font> `chgrp` 命令，改变文件所属用户组
+```shell
 chgrp group1 file1     #改变文件的群组
 ```
 
 ### <font color="#dd000">5. 文本处理</font>
 
-<font color="#dd0000">5.1</font><b class="bgc-e4e6e8">grep</b>命令，分析一行的信息，若当中有我们所需要的信息，就将该行显示出来，该命令通常与管道命令一起使用，用于对一些命令的输出进行筛选加工等等
+<font color="#dd0000">5.1</font> `grep` 命令，分析一行的信息，若当中有我们所需要的信息，就将该行显示出来，该命令通常与管道命令一起使用，用于对一些命令的输出进行筛选加工等等
 
-```shell script
+```shell
 grep Aug /var/log/messages      #在文件 '/var/log/messages'中查找关键词"Aug" 
 grep ^Aug /var/log/messages     #在文件 '/var/log/messages'中查找以"Aug"开始的词汇 
 grep [0-9]  /var/log/messages   #选择 '/var/log/messages' 文件中所有包含数字的行 
@@ -135,25 +132,25 @@ sed 's/stringa1/stringa2/g' example.txt  #将example.txt文件中的 "string1" �
 sed '/^$/d' example.txt         #从example.txt文件中删除所有空白行
 ```
 
-<font color="#dd0000">5.2</font><b class="bgc-e4e6e8">paste</b>命令
+<font color="#dd0000">5.2</font> `paste` 命令
 
-```shell script
+```shell
 paste file1 file2         #合并两个文件或两栏的内容 
 paste -d '+' file1 file2  #合并两个文件或两栏的内容，中间用"+"区分
 ```
 
-<font color="#dd0000">5.3 </font><b class="bgc-e4e6e8">sort</b>命令
+<font color="#dd0000">5.3 </font> `sort` 命令
 
-```shell script
+```shell
 sort file1 file2            #排序两个文件的内容 
 sort file1 file2 | uniq     #取出两个文件的并集(重复的行只保留一份) 
 sort file1 file2 | uniq -u  #删除交集，留下其他的行 
 sort file1 file2 | uniq -d  #取出两个文件的交集(只留下同时存在于两个文件中的文件)
 ```
 
-<font color="#dd0000">5.4</font><b class="bgc-e4e6e8">comm</b>命令
+<font color="#dd0000">5.4</font> `comm` 命令
 
-```shell script
+```shell
 comm -1 file1 file2   #比较两个文件的内容只删除 'file1' 所包含的内容 
 comm -2 file1 file2   #比较两个文件的内容只删除 'file2' 所包含的内容 
 comm -3 file1 file2   #比较两个文件的内容只删除两个文件共有的部分
@@ -161,9 +158,9 @@ comm -3 file1 file2   #比较两个文件的内容只删除两个文件共有的
 
 ### <font color="#dd000">6. 打包和压缩文件</font>
 
-<font color="#dd0000">6.1 </font><b class="bgc-e4e6e8">tar</b>命令，对文件进行打包，默认情况并不会压缩，如果指定了相应的参数，它还会调用相应的压缩程序（如gzip和bzip等）进行压缩和解压
+<font color="#dd0000">6.1 </font> `tar` 命令，对文件进行打包，默认情况并不会压缩，如果指定了相应的参数，它还会调用相应的压缩程序（如gzip和bzip等）进行压缩和解压
 
-```shell script
+```shell
 -c  #新建打包文件
 -t  #查看打包文件的内容含有哪些文件名
 -x  #解打包或解压缩的功能，可以搭配-C（大写）指定解压的目录，注意-c,-t,-x不能同时出现在同一条命令中
@@ -174,9 +171,9 @@ comm -3 file1 file2   #比较两个文件的内容只删除两个文件共有的
 -C dir  #指定压缩/解压缩的目录dir
 ```
 
-<font color="#dd0000">6.2</font> 压缩：<b class="bgc-e4e6e8">tar -jcv -f filename.tar.bz2 </b> (要被处理的文件或目录名称) 查询：<b class="bgc-e4e6e8">tar -jtv -f filename.tar.bz2 </b>解压：<b class="bgc-e4e6e8">tar -jxv -f filename.tar.bz2 -C </b> (欲解压缩的目录)
+<font color="#dd0000">6.2</font> 压缩：`tar -jcv -f filename.tar.bz2` (要被处理的文件或目录名称) 查询：`tar -jtv -f filename.tar.bz2` 解压：`tar -jxv -f filename.tar.bz2 -C` (欲解压缩的目录)
 
-```shell script
+```shell
 bunzip2 file1.bz2  #解压一个叫做 'file1.bz2'的文件 
 bzip2 file1        #压缩一个叫做 'file1' 的文件 
 gunzip file1.gz    #解压一个叫做 'file1.gz'的文件 
@@ -192,7 +189,7 @@ zip -r file1.zip file1 file2 dir1    #将几个文件和目录同时压缩成一
 ```
 
 ### <font color="#dd000">7. 系统和关机（关机、重启和登出）</font>
-```shell script
+```shell
 shutdown -h now  #关闭系统(1) 
 init 0           #关闭系统(2) 
 telinit 0        #关闭系统(3) 
@@ -206,11 +203,11 @@ time             #测算一个命令（即程序）的执行时间
 
 ### <font color="#dd000">8. 进程相关的命令</font>
 
-<font color="#dd0000">8.1 </font> <b class="bgc-e4e6e8">jps</b>命令，显示当前系统的java进程情况，及其id号<b class="bgc-e4e6e8">jps (Java Virtual Machine Process Status Tool)</b>是JDK 1.5提供的一个显示当前所有java进程pid的命令，简单实用，非常适合在linux/unix平台上简单察看当前java进程的一些简单情况。
+<font color="#dd0000">8.1 </font> `jps` 命令，显示当前系统的java进程情况，及其id号 `jps (Java Virtual Machine Process Status Tool)` 是JDK 1.5提供的一个显示当前所有java进程pid的命令，简单实用，非常适合在linux/unix平台上简单察看当前java进程的一些简单情况。
 
-<font color="#dd0000">8.2</font> <b class="bgc-e4e6e8">ps</b>命令，用于将某个时间点的进程运行情况选取下来并输出，process之意
+<font color="#dd0000">8.2</font> `ps` 命令，用于将某个时间点的进程运行情况选取下来并输出，`process` 之意
 
-```shell script
+```shell
 -A   #所有的进程均显示出来
 -a   #不与terminal有关的所有进程
 -u   #有效用户的相关进程
@@ -223,13 +220,13 @@ ps -lA  # 查看系统所有的进程数据
 ps axjf # 查看连同一部分进程树状态
 ```
 
-<font color="#dd0000">8.3</font><b class="bgc-e4e6e8">kill</b>命令,用于向某个工作（jobnumber）或者是某个PID（数字）传送一个信号，它通常与ps和jobs命令一起使用
+<font color="#dd0000">8.3</font> `kill` 命令,用于向某个工作（jobnumber）或者是某个PID（数字）传送一个信号，它通常与ps和jobs命令一起使用
 
 命令格式 : kill[命令参数][进程id]
 
 命令参数:
 
-```shell script
+```shell
 -l  #信号，若果不加信号的编号参数，则使用“-l”参数会列出全部的信号名称
 -a  #当处理当前进程时，不限制命令名和进程号的对应关系
 -p  #指定kill 命令只打印相关进程的进程号，而不发送任何信号
@@ -238,9 +235,9 @@ ps axjf # 查看连同一部分进程树状态
 
 ```
 
-🌰1：列出所有信号名称 命令：<b class="bgc-e4e6e8">kill -l</b> 输出：
+🌰1：列出所有信号名称 命令：`kill -l` 输出：
 
-```shell script
+```shell
 [root@localhost test6]# kill -l
  1) SIGHUP       2) SIGINT       3) SIGQUIT      4) SIGILL
  5) SIGTRAP      6) SIGABRT      7) SIGBUS       8) SIGFPE
@@ -265,7 +262,7 @@ ps axjf # 查看连同一部分进程树状态
 
 只有第9种信号(SIGKILL)才可以无条件终止进程，其他信号进程都有权利忽略。   下面是常用的信号
 
-```shell script
+```shell
 HUP     1     #终端断线
 INT     2    #中断（同 Ctrl + C）
 QUIT    3    #退出（同 Ctrl + \）
@@ -278,7 +275,7 @@ STOP    19   #暂停（同 Ctrl + Z）
 
 🌰2: 得到指定信号的数值
 
-```shell script
+```shell
 [root@localhost test6]# kill -l KILL
 [root@localhost test6]# kill -l SIGKILL
 [root@localhost test6]# kill -l TERM
@@ -287,9 +284,9 @@ STOP    19   #暂停（同 Ctrl + Z）
 ```
 
 
-🌰3: 先用 <b class="bgc-e4e6e8">ps</b>查找进程，然后用<b class="bgc-e4e6e8">kill</b>杀掉
+🌰3: 先用 `ps` 查找进程，然后用 `kill` 杀掉
 
-```shell script
+```shell
 #命令：
 kill 3268
 [root@localhost test6]# ps -ef|grep vim 
@@ -300,16 +297,16 @@ root      3370  2822  0 16:21 pts/0    00:00:00 grep vim
 
 🌰4: 彻底杀死进程
 
-```shell script
+```shell
  #命令：
 kill –9 3268   # -9 强制杀掉进程
 ```
 
-<font color="#dd0000">8.4</font><b class="bgc-e4e6e8">killall</b>命令，向一个命令启动的进程发送一个信号，用于杀死指定名字的进程
+<font color="#dd0000">8.4</font> `killall` 命令，向一个命令启动的进程发送一个信号，用于杀死指定名字的进程
 
 命令格式 : killall[命令参数][进程名]
 
-```shell script
+```shell
 #命令参数：
 -Z      #只杀死拥有scontext 的进程
 -e      #要求匹配进程名称
@@ -327,7 +324,7 @@ kill –9 3268   # -9 强制杀掉进程
 
 🌰: 
 
-```shell script
+```shell
 #1：杀死所有同名进程
     killall nginx
     killall -9 bash
@@ -336,11 +333,11 @@ kill –9 3268   # -9 强制杀掉进程
     killall -TERM ngixn  或者  killall -KILL nginx
 ```
 
-<font color="#dd0000">8.5</font><b class="bgc-e4e6e8">top</b>命令，是Linux下常用的性能分析工具，能够实时显示系统中各个进程的资源占用状况，类似于Windows的任务管理器。
+<font color="#dd0000">8.5</font> `top` 命令，是Linux下常用的性能分析工具，能够实时显示系统中各个进程的资源占用状况，类似于Windows的任务管理器。
 
 如何杀死进程：
 
-```shell script
+```shell
 （1）图形化界面的方式
 （2）kill -9 pid  （-9表示强制关闭）
 （3）killall -9 程序的名字
@@ -351,6 +348,6 @@ kill –9 3268   # -9 强制杀掉进程
 
 查看进程端口号：
 
-```shell script
+```shell
 netstat -tunlp|grep 端口号
 ```

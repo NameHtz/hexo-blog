@@ -69,12 +69,19 @@ class Welcome extends React.Component {
     * 组件更新前触发
     */
    getSnapshotBeforeUpdate(prevProps, prevState) {
-     return true;
+     if(prevProps.value != this.props.value){
+       return true
+     }
+     return null;
    }
    /**
     * 组件更新后触发
     */
-   componentDidUpdate() {}
+   componentDidUpdate(prevProps, prevState, snapshot) {
+     if(snapshot != null){
+        
+     }
+  }
    /**
     * 组件卸载时触发
     */
@@ -86,10 +93,13 @@ class Welcome extends React.Component {
 }
 ```
 
-1. React16新的生命周期弃用了componentWillMount、componentWillReceiveProps，componentWillUpdate
-2. 新增了getDerivedStateFromProps、getSnapshotBeforeUpdate来代替弃用的三个钩子函数 componentWillMount、componentWillReceiveProps，componentWillUpdate 
-3. React16并没有删除这三个钩子函数，但是不能和新增的钩子函数 getDerivedStateFromProps、getSnapshotBeforeUpdate 混用，React17将会删除 componentWillMount、componentWillReceiveProps，componentWillUpdate
-4. 新增了对错误的处理 componentDidCatch
+1. React16新的生命周期弃用了`componentWillMount`、`componentWillReceiveProps`，`componentWillUpdate`
+
+2. 新增了`getDerivedStateFromProps`、`getSnapshotBeforeUpdate`来代替弃用的三个钩子函数 `componentWillMount`、`componentWillReceiveProps`，`componentWillUpdate` 
+
+3. React16并没有删除这三个钩子函数，但是不能和新增的钩子函数 `getDerivedStateFromProps`、`getSnapshotBeforeUpdate` 混用，React17将会删除 `componentWillMount`、`componentWillReceiveProps`、`componentWillUpdate`
+
+4. 新增了对错误的处理 `componentDidCatch`
 
 [异步渲染之更新](https://zh-hans.reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
 
