@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>javaScript Array.map() Array.filter() | </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="map() 方法创建一个新数组，其结果是该数组中的每个元素是调用一次提供的函数后的返回值。 语法:123var new_array &#x3D; arr.map(function callback(currentValue[, index[, array]]) &amp;#123; &#x2F;&#x2F; Return element for new_array &amp;#125;[, thisArg])">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javaScript Array.map() Array.filter()">
+<meta property="og:url" content="https://namehtz.github.io/2020/09/25/js-array-01/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="map() 方法创建一个新数组，其结果是该数组中的每个元素是调用一次提供的函数后的返回值。 语法:123var new_array &#x3D; arr.map(function callback(currentValue[, index[, array]]) &amp;#123; &#x2F;&#x2F; Return element for new_array &amp;#125;[, thisArg])">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-25T08:28:52.000Z">
+<meta property="article:modified_time" content="2020-09-25T08:28:52.951Z">
+<meta property="article:author" content="yang">
+<meta property="article:tag" content="javaScript">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo"></a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+<!--        -->
+<!--          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>-->
+<!--        -->
+<!--        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>-->
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://namehtz.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-js-array-01" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/25/js-array-01/" class="article-date">
+  <time datetime="2020-09-25T08:28:52.000Z" itemprop="datePublished">2020-09-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      javaScript Array.map() Array.filter()
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> <code>map()</code> 方法创建一个新数组，其结果是该数组中的每个元素是调用一次提供的函数后的返回值。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法:"></a>语法:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var new_array &#x3D; arr.map(function callback(currentValue[, index[, array]]) &#123;</span><br><span class="line"> &#x2F;&#x2F; Return element for new_array </span><br><span class="line">&#125;[, thisArg])</span><br></pre></td></tr></table></figure>
+
+<h5 id="参数"><a href="#参数" class="headerlink" title="参数:"></a>参数:</h5><p><code>callback</code>: 生成新数组元素的函数，使用三个参数:</p>
+<ol>
+<li><code>currentValue</code>: (<code>callback</code> 数组中正在处理的当前元素)</li>
+<li><code>index</code>: (<code>callback</code> 数组中正在处理的当前元素的索引)</li>
+<li><code>array</code>: (<code>map</code> 方法调用的数组)</li>
+</ol>
+<p><code>thisArg</code>: (执行 <code>callback</code> 函数时值被用作<code>this</code>)</p>
+<h5 id="例子"><a href="#例子" class="headerlink" title="例子:"></a>例子:</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> list = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]; </span><br><span class="line"><span class="keyword">let</span> result = list.map(<span class="function"><span class="params">currentValue</span> =&gt;</span> currentValue * <span class="number">2</span> );</span><br><span class="line"><span class="built_in">console</span>.log(result) <span class="comment">// [2,4,6,8]</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="实现一个-map"><a href="#实现一个-map" class="headerlink" title="实现一个 map"></a>实现一个 <code>map</code></h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;Array&#125;</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param<span class="type">&#123;function&#125;</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param<span class="type">&#123;thisAgs&#125;</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns<span class="type">&#123;Array&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">map</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> [array, callback, thisArg] = [...arguments];</span><br><span class="line">  <span class="keyword">if</span> (!<span class="built_in">Array</span>.isArray(array)) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(array + <span class="string">&#x27; is not a Array&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> callback !== <span class="string">&#x27;function&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(callback + <span class="string">&#x27; is not a function&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> length = array.length;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="keyword">new</span> <span class="built_in">Array</span>(length)</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (i <span class="keyword">in</span> array) &#123;</span><br><span class="line">      result[i] = callback.call(thisArg, array[i], i, array)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(map([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="function">(<span class="params">item</span>) =&gt;</span> (&#123;<span class="attr">num</span>: item&#125;)))</span><br></pre></td></tr></table></figure>
+
+<p><code>filter()</code> 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。</p>
+<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法:"></a>语法:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var newArray &#x3D; arr.filter(callback(element[, index[, array]])[, thisArg])</span><br></pre></td></tr></table></figure>
+
+<h5 id="参数-1"><a href="#参数-1" class="headerlink" title="参数:"></a>参数:</h5><p><code>callback</code>:用来测试数组的每个元素的函数。返回 true 表示该元素通过测试，保留该元素，false 则不保留。它接受以下三个参数:</p>
+<ol>
+<li><code>element</code>: 数组中当前正在处理的元素</li>
+<li><code>index</code>: (可选) 正在处理的元素在数组中的索引</li>
+<li><code>array</code>: (可选) 调用了 filter 的数组本身</li>
+</ol>
+<p><code>thisArg</code> (可选) 执行 callback 时，用于 this 的值</p>
+<h5 id="例子-1"><a href="#例子-1" class="headerlink" title="例子:"></a>例子:</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> list = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]; </span><br><span class="line"><span class="keyword">let</span> result = list.filter(<span class="function"><span class="params">element</span> =&gt;</span> element &gt; <span class="number">2</span> );</span><br><span class="line"><span class="built_in">console</span>.log(result) <span class="comment">// [3,4]</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="实现一个-filter"><a href="#实现一个-filter" class="headerlink" title="实现一个 filter"></a>实现一个 <code>filter</code></h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;Array&#125;</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param<span class="type">&#123;function&#125;</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param<span class="type">&#123;thisAgs&#125;</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns<span class="type">&#123;Array&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">filter</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> [array, callback, thisArg] = [...arguments];</span><br><span class="line">  <span class="keyword">if</span> (!<span class="built_in">Array</span>.isArray(array)) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(array + <span class="string">&#x27; is not a Array&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> callback !== <span class="string">&#x27;function&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(callback + <span class="string">&#x27; is not a function&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> length = array.length;</span><br><span class="line">  <span class="keyword">let</span> result = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (i <span class="keyword">in</span> array &amp;&amp; callback.call(thisArg, array[i], i, array)) &#123;</span><br><span class="line">      result.push(array[i])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(filter([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="function">(<span class="params">item</span>) =&gt;</span>(item &gt; <span class="number">2</span>)))</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://namehtz.github.io/2020/09/25/js-array-01/" data-id="ckfhzjpme0000q6j50hqd0eat" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaScript/" rel="tag">javaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/24/component-library/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">那些组件库</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/component-library/" rel="tag">component library</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/" rel="tag">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ufw/" rel="tag">ufw</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Nginx/" style="font-size: 10px;">Nginx</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/React/" style="font-size: 15px;">React</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/component-library/" style="font-size: 10px;">component library</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/javaScript/" style="font-size: 20px;">javaScript</a> <a href="/tags/ufw/" style="font-size: 10px;">ufw</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/09/25/js-array-01/">javaScript Array.map() Array.filter()</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/24/component-library/">那些组件库</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/24/some-books/">一些书</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/23/js-array-min-max/">JS Array 里找出，最大值、最小值</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/23/git-merge-abort/">如何撤消有冲突的git merge</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 yang<br>
+      Powered by <a href="/"> gitHub Pages</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
