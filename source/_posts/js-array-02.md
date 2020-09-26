@@ -1,7 +1,9 @@
 ---
 title: javaScript Array.reduce()
 tags: javaScript
+date: 2020-09-26 22:25:55
 ---
+
 
 `reduce()` 方法对数组中的每个元素执行一个由您提供的**reducer**函数(升序执行)，将其结果汇总为单个返回值。
 
