@@ -6,13 +6,13 @@ date: 2020-09-25 16:28:52
 
  `map()` 方法创建一个新数组，其结果是该数组中的每个元素是调用一次提供的函数后的返回值。
  
-### 语法:
+##### 语法:
 ```
 var new_array = arr.map(function callback(currentValue[, index[, array]]) {
  // Return element for new_array 
 }[, thisArg])
 ```
-
+<!--more-->
 ##### 参数:
 `callback`: 生成新数组元素的函数，使用三个参数:
    1. `currentValue`: (`callback` 数组中正在处理的当前元素)
