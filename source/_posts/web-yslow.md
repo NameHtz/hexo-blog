@@ -5,7 +5,7 @@ tags: yslow
 ---
 
 `YSlow`根据Yahoo!的高性能网站规则来分析网页以及为什么网页变慢
-
+<!-- more -->
  1. [最小化HTTP请求](http://developer.yahoo.com/performance/rules.html#num_http)
  2. [使用内容交付网络](http://developer.yahoo.com/performance/rules.html#cdn)
  3. [避免空src或href](http://developer.yahoo.com/performance/rules.html#emptysrc)
