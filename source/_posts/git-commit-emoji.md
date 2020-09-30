@@ -3,6 +3,9 @@ title: git commit emoji
 tags: git
 date: 2020-09-23 10:32:52
 ---
+git commit emoji
+
+<!-- more -->
 
 |   Commit type              | Emoji                                         |
 |:---------------------------|:----------------------------------------------|
