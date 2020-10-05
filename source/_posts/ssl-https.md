@@ -34,6 +34,15 @@ scp <本地文件名> <用户名>@<服务器IP>:<上传保存路径即文件名>
 scp /documents/file.zip root@127.0.0.1:/root 
 
 # 把本地documents文件夹下的file.zip，用127.0.0.1的root用户上传到服务器的root目录下
+
+```
+* 解压
+
+ubuntu下解压zip文件
+
+```
+unzip test.zip
+# 解压到当前目录下 
 ```
 * 配置Nginx
  
