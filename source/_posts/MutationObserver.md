@@ -5,6 +5,8 @@ date: 2020-11-30 15:38:15
 tags: javsScript
 ---
 
+来通过 MDN
+
 `MutationObserver` 接口提供了监视对DOM树所做更改的能力。它被设计为旧的Mutation Events功能的替代品，该功能是DOM3 Events规范的一部分
 
 <!-- more -->
