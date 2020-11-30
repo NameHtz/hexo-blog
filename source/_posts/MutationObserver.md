@@ -7,6 +7,8 @@ tags: javsScript
 
 `MutationObserver` 接口提供了监视对DOM树所做更改的能力。它被设计为旧的Mutation Events功能的替代品，该功能是DOM3 Events规范的一部分
 
+<!-- more -->
+
 ```javascript
 // 选择需要观察变动的节点
 const targetNode = document.getElementById('some-id');
