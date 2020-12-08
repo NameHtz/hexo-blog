@@ -18,3 +18,35 @@ arr.sort((a, b) => a.localeCompare(b, "zh-Hans-CN", {sensitivity:"accent"}))
 ```
 
 [String.prototype.localeCompare()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare)
+
+
+```javascript
+/**
+ * data : [{name: 'Vue'}, {name: 'React'}, {name: 'Node.js'}]
+ * key : obj 的 key ，通过这个key的值排序
+ * mode : 倒序 false， 正序 true
+ * ***********************************************************
+ *  🌰
+ * objectInListSort(data, 'name', true)
+ * return: [ { name: 'Node.js' }, { name: 'React' }, { name: 'Vue' } ]
+ *
+ */
+export function objectInListSort(data, key, mode) {
+  let reg = /[a-zA-Z0-9]/;
+  return (data || []).sort((x, y) => {
+    let xValue = x[key].toLocaleUpperCase();
+    let yValue = y[key].toLocaleUpperCase();
+    if (reg.test(xValue) || reg.test(yValue)) {
+      if (xValue > yValue) {
+        return mode ? 1 : -1
+      } else if (xValue < yValue) {
+        return mode ? -1 : 1
+      } else {
+        return 0
+      }
+    } else {
+      return xValue.localeCompare(yValue)
+    }
+  })
+}
+```
