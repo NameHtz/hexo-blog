@@ -2,7 +2,7 @@
 layout: posts
 title: MutationObserver 监控元素改动
 date: 2020-11-30 15:38:15
-tags: javsScript
+tags: javaScript
 ---
 
 来通过 MDN

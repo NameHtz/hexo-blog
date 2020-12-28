@@ -1,7 +1,7 @@
 ---
 title: javascript-types-of
 date: 2020-12-23 17:57:46
-tags:
+tags: javaScript
 ---
 
 <!--more -->
