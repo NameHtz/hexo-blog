@@ -4,6 +4,8 @@ date: 2020-12-10 17:59:54
 tags: React
 ---
 
+<b class="bgc-a5673f">记录</b>
+
 【原文】[React State 5 Ways](https://dev.to/dabit3/react-state-6-ways-2bem)
 
 【译】[谈谈 React 5种最流行的状态管理库](https://mp.weixin.qq.com/s/iriZfLsj2njDRe_wxEKUIQ)

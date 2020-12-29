@@ -4,6 +4,8 @@ date: 2020-12-10 17:08:30
 tags: React
 ---
 
+<b class="bgc-a5673f">记录</b>
+
 ##### React Fiber 是一种基于浏览器的单线程调度算法。
 
 React Fiber 用类似 requestIdleCallback 的机制来做异步 diff。但是之前数据结构不支持这样的实现异步 diff，于是 React 实现了一个类似链表的数据结构，将原来的 递归diff 变成了现在的 遍历diff，这样就能做到异步可更新了。
