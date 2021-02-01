@@ -1,5 +1,5 @@
 ---
-title: long-list-render
+title: web 渲染优化
 tags:
 ---
 
@@ -13,3 +13,7 @@ tags:
 4. [Rendering Performance](https://developers.google.com/web/fundamentals/performance/rendering)
 
 5. [The Basics of Page Speed](https://designingforperformance.com/basics-of-page-speed/)
+
+
+#### 首屏
+6. [First Contentful Paint](https://web.dev/fcp/)
